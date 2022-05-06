@@ -1,0 +1,35 @@
+#服务器端口号配置
+server:
+  port: 8080
+
+# 数据源信息配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/alipay?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# 配置alipay数据
+alipay:
+  # 应用ID,您的APPID，收款账号既是您的APPID对应支付宝账号
+  APPID: 2021000119685182
+  # 商户私钥，您的PKCS8格式RSA2私钥
+  RSA_PRIVATE_KEY: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC17h73hw/cCl/aDHMo8R+IvPiwdumtRoNZ5oD7eHw0vJnrXrbq7UY8wqUTK7E86S8L3W/SuY0J4pHdG3UP50RimOWGc6QYSebZy/ECgvytt1ph8vORpr5f66wPIUDp1f7GzGOH5GOXeqO4pQ5DMFXO7nF/Y7NVPsGrFwvei18KjCEPG5p4nz2GfIXOPJENs4xDpb41tIBmBlQf5BoU3kXPONaFRuoHoIb74RfHRp4jZmr5RmOXQeOLvNuiDCdfr5LvxL6D4b3l5ybDxhG2zpcLcaVFpzRPbdo/+mqNue9+eCYStOGxY8JQtZs22v7So4uarUR6cRqvUjKJniv1i5XhAgMBAAECggEAXiOxcnQ5CKt1necDUBQ1NRRTuzxM/pSWM1bLN1TJMKDHJLwF+tp8lcRClwDs3Y/sAD+9NVU+XfcXc0pZ8LjC8iIb4s7EAq16/whA1gPhrCJMapLE5oFZ0Vip18plRJqvEz9/4TmVLzUOsuT11F6WiFVp9XkputqWbGmogqerrlCjt6V/h/3dEs0rEPOvK9FUt88p7XFALaANl63mV3BAbqQDrjaqseHKdBiKqXOdET2uthKvUAjj2UQQggAi0YBA3Ip/4aJsAGffZw7WaTU8QlCmGWAZgRkrWjJ+nOwFr24ry3mxnr23mMfF0GMB+drRRoujtRbYEtT6Mei4njCOgQKBgQDw7CSY2/G+oqIDqPv5HLwO+tLPxvZo1h7/6D6tCMOQq84cPIEzBVkIHfc4eLA/Y/jgiimsuHSX4+n2REgdFWURWa9bjd4/nMYSxjZWXnwldw2fV1IOPh8mASelJ7FI0xIZ+i05jbkEgJKQDQ3rOsMj98n17OiINGUUKf8M/d/2NQKBgQDBUNpygLxvPl0XU7Pwx/UCYQL9b3F5GmE8PnGvcBAj2DIfi05fzJ4f8nwHg0MKdv9jB8WHUlRcuuiAtUSyxTmjnGY3sHxLWqyGFApYi0PZGCDN308HBGyBAgZ1zo1AVxAV7V5uZtPR/sOTOW+xewiaHQXk7CXadE4wvbCOGKKmfQKBgQChF3TdFOwO6RXl1p8tEc6ZQZOmRMZMkSfHO1Z1Qs/pM0esz7QgFmpSqB6/DsvihwlJsnhtOiUTztyIw11ovP6IXGyJjlHWPRCgSxLYK3NdZb6hFbUTOux+7/S/VMwRArkuz35f5miZHxNg6Kmu6OrEaRIMs21EbaxMkEwvNq4DJQKBgEXL2XMqA97uV1IKyJcQuudm+1thl0iwO5cyvH0pKsqmTkKRW3S/PgAu3pUf0V6/5ClvLuRS1167pSKDUBBzoQHvgABvWhEi5dNq/OlHLvH9AisSi0fvUvWpM4fpUZp/VLF2CHg37BaPszE+tZMQ5uQtwmkK0gfzoh96/XnwbxlJAoGAHQifuf7wV7PqafHq2xSXPMr51qF/5Pr03ScUGyaqN/xQWQaIaDuZrD1SoQdmpT99GCdmiPVOKwWNZlyIyK4H2RDsbky9D7S8QDj5zqCkF7AQumqh1QcJY97LONdtZZD3kTRAnpGvJTqO8Xpu+SjceiTlV7+KVkzdswHAc3qUhSo=
+  # 支付宝支付公钥
+  ALIPAY_PUBLIC_KEY: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAop/q2y4KFD/yhaclmMF8bfPnAsuebwsA2boRBPONtTqfSJXIevNQ0J5EYLGVf5qxvULFPj+SqNUdMVBchGGw3l7BEvClE4IFn6hkXoPf4r8MkiWNx8a6i8RDuuMcXVYplEEw+uMd0lJIqn2KWnbhuxpYEZS7Hdun8ektNJsBT4dtEnoes2sq9AiWT4o8u6xzkSZ+WAbV8VjUJkWEZbc3pYjjzqNdAVRUH2zoOtSKU3rLvPvAZheNgAZlPQpEgy+8Hh4IAPC+mC5u6iEfJTX9cem1u87X0efrZs/LFAQ1hnDNeMGHboj7hOceAUgBN20OlqV7oauIwFMgiw507BIWnwIDAQAB
+  # 异步回调地址 必须外网能够访问（这里需要配置内网穿透），当支付成功后会调用该API
+  notify_url: http://g42kzh.natappfree.cc/alipay/pay/callback
+  # 同步回调地址 必须外网能够访问
+  return_url:
+  # 网关（注意沙箱网关和正式网关的区别，这里填写沙箱环境下的网关）
+  URL: https://openapi.alipaydev.com/gateway.do
+  # 编码
+  CHARSET: UTF-8
+  # 返回数据格式
+  FORMAT: json
+  # 日志地址
+  log_path: /log
+  # RSA2
+  SIGNTYPE: RSA2
